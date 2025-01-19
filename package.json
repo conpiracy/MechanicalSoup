@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "node server.js",
     "start": "node server.js",
-    "scrape": "python process_revenue_data.py"
+    "scrape": "python process_revenue_data.py",
+    "build": "node server.js",
+    "vercel-build": "echo 'Building...'"
   },
   "dependencies": {
     "@prisma/client": "^6.2.1",
@@ -14,8 +16,11 @@
     "@types/node": "^20.0.0",
     "@vercel/node": "^2.15.1",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
     "express": "^4.18.2",
-    "typescript": "^5.0.0"
+    "pg": "^8.13.1",
+    "typescript": "^5.0.0",
+    "axios": "^1.6.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.20",

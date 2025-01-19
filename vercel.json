@@ -2,21 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/**/*.js",
-      "use": "@vercel/node",
-      "config": {
-        "nodeVersion": "20.x"
-      }
+      "src": "server.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/api/whop-data",
-      "dest": "/api/get-whop-data.js"
-    },
-    {
-      "src": "/api/update",
-      "dest": "/api/update-data.js"
+      "src": "/api/(.*)",
+      "dest": "/server.js"
     }
   ],
   "crons": [
